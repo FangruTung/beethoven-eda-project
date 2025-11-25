@@ -1,0 +1,100 @@
+{\rtf1\ansi\ansicpg950\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \uc0\u26684 \u24335 \u65288 Format\u65289 \u8594  \u36681 \u25104 \u32020 \u25991 \u23383 \u65288 Make Plain Text\u65289   \
+\
+# Beethoven Piano Sonatas \'97 Exploratory Data Analysis\
+\
+This project performs an exploratory data analysis (EDA) on ten Beethoven piano sonatas using MIDI data and Python.  \
+Using the `music21` library, the analysis extracts key signatures, note density, pitch range, and compares early, middle, and late period sonatas.\
+\
+---\
+\
+## \uc0\u55356 \u57263  Objectives\
+\
+1. Analyze key distribution across the selected sonatas.  \
+2. Compute note density (notes per second) for each sonata.  \
+3. Measure pitch range and identify stylistic patterns.  \
+4. Compare characteristics of early, middle, and late period sonatas.  \
+5. Visualize musical trends using bar and line charts.\
+\
+---\
+\
+## \uc0\u55357 \u56513  Project Structure\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 beethoven-eda-project/\
+\uc0\u9500 \u9472  data/\
+\uc0\u9474  \u9492 \u9472  midi/\
+\uc0\u9500 \u9472  notebook/\
+\uc0\u9474  \u9492 \u9472  beethoven_sonatas.ipynb\
+\uc0\u9500 \u9472  assets/\
+\uc0\u9474  \u9492 \u9472  images/\
+\uc0\u9492 \u9472  README.md\
+\
+---\
+\
+## \uc0\u9881  Methods\
+\
+### Pseudocode\
+1. Upload MIDI files into Google Colab.  \
+2. For each file:\
+   - Parse using `music21.converter.parse()`\
+   - Extract key signature  \
+   - Count notes  \
+   - Compute duration  \
+   - Calculate note density  \
+   - Measure pitch range  \
+3. Store all extracted features into a DataFrame.  \
+4. Visualize musical features using matplotlib.\
+\
+### Algorithm Summary\
+- **Key signature:** `score.analyze("key")`  \
+- **Duration:** `score.highestTime`  \
+- **Notes:** count items inside `score.recurse().notes`  \
+- **Pitch range:** max(pitches) \uc0\u8722  min(pitches)  \
+- **Period grouping:**  \
+  - Early: 1\'9610  \
+  - Middle: 11\'9623  \
+  - Late: 24\'9632  \
+\
+---\
+\
+## \uc0\u55357 \u56522  Results & Visualizations\
+\
+The following figures are generated in the notebook:\
+\
+- Key distribution  \
+- Note density by sonata number  \
+- Pitch range across sonatas  \
+- Average note density by period  \
+- Average pitch range by period  \
+\
+---\
+\
+## \uc0\u55358 \u56810  Tools Used\
+- Python  \
+- music21  \
+- pandas  \
+- matplotlib  \
+- Google Colab  \
+\
+---\
+\
+## \uc0\u55357 \u56524  GitHub Pages  \
+This repository is published using GitHub Pages for online viewing.  \
+\
+---\
+\
+## \uc0\u55357 \u56538  References\
+- Public-domain Beethoven MIDI files  \
+- Music21 Documentation  \
+- Matplotlib Documentation  \
+
+\f0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+}
